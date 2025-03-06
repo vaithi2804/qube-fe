@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
 import Details from './pages/Details';
+import AlbumOverview from './pages/albumOverview';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<AlbumOverview />} />
       <Route path="/details/:id" element={<Details />} />
     </Routes>
   );

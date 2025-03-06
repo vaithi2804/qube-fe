@@ -10,7 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.7",
     "axios": "^1.8.1",
+    "@types/react": "^18.2.59",
+    "@types/react-bootstrap": "^0.32.35",
+    "bootstrap": "^5.3.3",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

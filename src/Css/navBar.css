@@ -1,0 +1,15 @@
+.menu-bar-base {
+    background-color: white;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
+    ;
+}
+
+.nav-bar-font {
+    font-family: Commissioner;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+
+}
