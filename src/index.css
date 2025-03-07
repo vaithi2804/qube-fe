@@ -14,7 +14,7 @@ body {
   
   @font-face {
     font-family: Commissioner;
-    src: url(../public/Font/static/Commissioner-Regular.ttf);
+    src: url(../Font/static/Commissioner-Regular.ttf);
   }
   
   .Commissioner{

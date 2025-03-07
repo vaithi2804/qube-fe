@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:5001/collections';
 
+// Fetch all albums from the API
 export const getAllAlbums = async () => {
   try {
     const response = await axios.get(API_URL);
@@ -12,6 +13,7 @@ export const getAllAlbums = async () => {
   }
 };
 
+// Fetch details of a specific album by its ID
 export const getAlbumDetails = async (id) => {
   try {
     const response = await axios.get(`${API_URL}/${id}`);

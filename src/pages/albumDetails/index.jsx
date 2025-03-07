@@ -6,6 +6,7 @@ import NavBarComponent from '../../components/NavBar';
 import StatusCard from '../../components/StatusCard';
 import Loader from '../../components/Loader';
 import CommonTable from '../../components/AlbumTable';
+import { formatDuration, formatSize } from '../../utils/utils';
 
 function AlbumDetails() {
   const { id } = useParams();
@@ -28,41 +29,33 @@ function AlbumDetails() {
     fetchAlbumDetails();
   }, [id]);
 
-  const formatSize = (bytes) => {
-    return bytes < 1024 * 1024
-      ? `${(bytes / 1024).toFixed(2)} KB`
-      : `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-  };
-
-  const formatDuration = (seconds) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const remainingSeconds = seconds % 60;
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-  };
-
+  // Column configuration for the table
   const columns = [
     { key: 'title', label: 'Song' },
-    { 
-      key: 'performers', 
-      label: 'Performers', 
-      render: (value) => value.length > 1 
-      ? value.slice(0, -1).join(', ') + ' & ' + value[value.length - 1] 
-      : value[0] 
+    {
+      key: 'performers',
+      label: 'Performers',
+      render: (value) => value.length > 1
+        ? value.slice(0, -1).join(', ') + ' & ' + value[value.length - 1]
+        : value[0]
     },
     { key: 'durationInSeconds', render: (value) => formatDuration(value), label: 'Duration' },
-    { 
-      key: 'sizeInBytes', 
-      label: 'Size', 
-      render: (value) => formatSize(value) 
+    {
+      key: 'sizeInBytes',
+      label: 'Size',
+      render: (value) => formatSize(value)
     }
   ];
 
+  // Show loader while fetching data
   if (loading) return <Loader />;
+
+  // Display error message if album data is unavailable
   if (!album) return <h2>Something went wrong. Try again later.</h2>;
 
   return (
     <div>
+      {/* Breadcrumb navigation */}
       <div className="mt-2 ms-4 ps-2 d-flex">
         <span className="data-txt breadcrumb cursor-pointer" onClick={() => navigate("/")}>
           Overview
@@ -71,10 +64,16 @@ function AlbumDetails() {
         <span className="breadcrumb">{album.name}</span>
       </div>
 
+      {/* Navigation bar with album title */}
       <NavBarComponent heading={album.name} />
+
       <div className="container-fluid">
-      <StatusCard albumDetails={album} />
-      <CommonTable data={album.songs} columns={columns}  />
+
+        {/* Status card displaying album details */}
+        <StatusCard albumDetails={album} />
+
+        {/* Table displaying album songs */}
+        <CommonTable data={album.songs} columns={columns} />
       </div>
     </div>
   );

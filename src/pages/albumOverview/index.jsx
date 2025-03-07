@@ -4,6 +4,7 @@ import { getAllAlbums } from '../../api/api';
 import Loader from '../../components/Loader';
 import NavBarComponent from '../../components/NavBar';
 import CommonTable from '../../components/AlbumTable';
+import { formatSize, formatDuration } from '../../utils/utils';
 
 const AlbumOverview = () => {
   const [albums, setAlbums] = useState([]);
@@ -26,6 +27,7 @@ const AlbumOverview = () => {
     fetchAlbums();
   }, []);
 
+  // Column configuration for the album table
   const columns = [
     { key: 'name', label: 'Collection Name', render: (value, row) => (
         <>
@@ -52,19 +54,6 @@ const AlbumOverview = () => {
   }
   ];
 
-  const formatDuration = (seconds) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const remainingSeconds = seconds % 60;
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-  };
-
-  const formatSize = (bytes) => {
-    return bytes < 1024 * 1024
-      ? `${(bytes / 1024).toFixed(2)} KB`
-      : `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-  };
-
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: true };
     return new Date(dateString).toLocaleDateString('en-GB', options).replace(' ', ' ');
@@ -72,14 +61,18 @@ const AlbumOverview = () => {
 
   return (
     <div>
+
+      {/* Navigation bar with page heading */}
       <NavBarComponent heading='Overview'/>
+
       <div className="container-fluid">
+        {/* Show loader while fetching data */}
         {loading ? (
           <Loader />
         ) : error ? (
-          <p>Something went wrong. Please try again later.</p>
+          <p>Something went wrong. Please try again later.</p>  // Show error message if API call fails
         ) : (
-          <CommonTable data={albums} columns={columns} enableSearch enableSort enablePagination />
+          <CommonTable data={albums} columns={columns} enableSearch enableSort />  // Display albums in a table
         )}
       </div>
     </div>
