@@ -55,10 +55,10 @@ const AlbumTable = ({ data, columns, title, enableSearch = false, enableSort = f
     };
 
     return (
-        <div className='card my-4 app-table-card'>
+        <div className='card my-4 app-table-card '>
             <div className="d-flex align-items-center justify-content-between">
             {enableSearch &&
-            <div className="d-flex align-items-center gap-0">                 
+            <div className="d-flex align-items-center gap-0 my-3">                 
                     <div className="input-group search-max-width">
                         <input
                             type="search"
@@ -84,9 +84,10 @@ const AlbumTable = ({ data, columns, title, enableSearch = false, enableSort = f
                             </span>
                         </button>
                     </div>     
-            </div>}
             </div>
-            <table className='mt-3 table-full-width'>
+            }
+            </div>
+            <table className='table-full-width'>
                 <thead>
                     <tr className='table-header'>
                         {columns.map((col, index) => (

@@ -11,7 +11,7 @@
       "releasedOn": "2024-09-03T14:35:00Z",
       "songs": [
         { "title": "The Horse and the Infant", "performers": ["Jorge Rivera-Herrans", "Luke Holt", "Cast of EPIC: The Musical"], "durationInSeconds": 135, "sizeInBytes": 15728640 },
-        { "title": "Warrior’s Call", "performers": ["Jorge Rivera-Herrans", "Epic Ensemble"], "durationInSeconds": 190, "sizeInBytes": 18874368 },
+        { "title": "Warrior’s Call", "performers": ["Jorge Rivera-Herrans"], "durationInSeconds": 190, "sizeInBytes": 18874368 },
         { "title": "Troy's Fate", "performers": ["Jorge Rivera-Herrans", "Sophia Walker"], "durationInSeconds": 165, "sizeInBytes": 16777216 },
         { "title": "The Last Stand", "performers": ["Jorge Rivera-Herrans", "Epic Orchestra"], "durationInSeconds": 210, "sizeInBytes": 20971520 },
         { "title": "Victory and Loss", "performers": ["Jorge Rivera-Herrans", "Luke Holt", "Choir of Legends"], "durationInSeconds": 170, "sizeInBytes": 17825792 }

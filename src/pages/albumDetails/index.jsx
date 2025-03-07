@@ -46,7 +46,9 @@ function AlbumDetails() {
     { 
       key: 'performers', 
       label: 'Performers', 
-      render: (value) => value.join(', ') 
+      render: (value) => value.length > 1 
+      ? value.slice(0, -1).join(', ') + ' & ' + value[value.length - 1] 
+      : value[0] 
     },
     { key: 'durationInSeconds', render: (value) => formatDuration(value), label: 'Duration' },
     { 
