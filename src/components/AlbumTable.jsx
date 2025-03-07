@@ -4,7 +4,7 @@ import '../Css/common.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const AlbumTable = ({ data, columns, title, enableSearch = true, enableSort = true, enablePagination = true }) => {
+const AlbumTable = ({ data, columns, title, enableSearch = false, enableSort = false, enablePagination = false }) => {
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPage, setTotalPage] = useState(0);
@@ -57,9 +57,8 @@ const AlbumTable = ({ data, columns, title, enableSearch = true, enableSort = tr
     return (
         <div className='card my-4 app-table-card'>
             <div className="d-flex align-items-center justify-content-between">
-            <div className="d-flex align-items-center gap-0">
-               {enableSearch && 
-                    <>
+            {enableSearch &&
+            <div className="d-flex align-items-center gap-0">                 
                     <div className="input-group search-max-width">
                         <input
                             type="search"
@@ -84,10 +83,8 @@ const AlbumTable = ({ data, columns, title, enableSearch = true, enableSort = tr
                             <img src="../Images/down-arrow.svg" alt="down arrow icon" />     
                             </span>
                         </button>
-                    </div>
-                    </>
-                }
-            </div>
+                    </div>     
+            </div>}
             </div>
             <table className='mt-3 table-full-width'>
                 <thead>
