@@ -1,0 +1,43 @@
+{
+  "collections": [
+    {
+      "id": "1",
+      "name": "EPIC: The Troy Saga",
+      "artist": "Jorge Rivera-Herrans",
+      "type": "EP",
+      "songCount": 5,
+      "durationInSeconds": 950,
+      "sizeInBytes": 48488,
+      "releasedOn": "2024-09-03T14:35:00Z",
+      "songs": [
+        { "title": "The Horse and the Infant", "performers": ["Jorge Rivera-Herrans", "Luke Holt", "Cast of EPIC: The Musical"], "durationInSeconds": 135, "sizeInBytes": 15728640 },
+        { "title": "Warrior’s Call", "performers": ["Jorge Rivera-Herrans"], "durationInSeconds": 190, "sizeInBytes": 18874368 },
+        { "title": "Troy's Fate", "performers": ["Jorge Rivera-Herrans", "Sophia Walker"], "durationInSeconds": 165, "sizeInBytes": 16777216 },
+        { "title": "The Last Stand", "performers": ["Jorge Rivera-Herrans", "Epic Orchestra"], "durationInSeconds": 210, "sizeInBytes": 20971520 },
+        { "title": "Victory and Loss", "performers": ["Jorge Rivera-Herrans", "Luke Holt", "Choir of Legends"], "durationInSeconds": 170, "sizeInBytes": 17825792 }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "The Journey Begins",
+      "artist": "Hans Zimmer",
+      "type": "Album",
+      "songCount": 10,
+      "durationInSeconds": 1800,
+      "sizeInBytes": 90000,
+      "releasedOn": "2023-06-15T12:00:00Z",
+      "songs": [
+        { "title": "The Journey Begins", "performers": ["Hans Zimmer", "Lisa Gerrard"], "durationInSeconds": 270, "sizeInBytes": 25165824 },
+        { "title": "Desert Winds", "performers": ["Hans Zimmer", "Oud Ensemble"], "durationInSeconds": 300, "sizeInBytes": 27262976 },
+        { "title": "Chasing Destiny", "performers": ["Hans Zimmer", "Cello Quartet"], "durationInSeconds": 255, "sizeInBytes": 24117248 },
+        { "title": "Echoes of Time", "performers": ["Hans Zimmer", "Vienna Orchestra"], "durationInSeconds": 280, "sizeInBytes": 25165824 },
+        { "title": "Warrior’s Path", "performers": ["Hans Zimmer", "Percussion Masters"], "durationInSeconds": 260, "sizeInBytes": 24117248 },
+        { "title": "Lost Kingdom", "performers": ["Hans Zimmer", "Epic Choir"], "durationInSeconds": 310, "sizeInBytes": 28311552 },
+        { "title": "Rise of the Phoenix", "performers": ["Hans Zimmer", "Orchestra of Legends"], "durationInSeconds": 270, "sizeInBytes": 25165824 },
+        { "title": "The Final Battle", "performers": ["Hans Zimmer", "Lisa Gerrard", "Percussion Masters"], "durationInSeconds": 300, "sizeInBytes": 27262976 },
+        { "title": "Victory March", "performers": ["Hans Zimmer", "Epic Choir"], "durationInSeconds": 290, "sizeInBytes": 26214400 },
+        { "title": "New Dawn", "performers": ["Hans Zimmer", "String Quartet"], "durationInSeconds": 265, "sizeInBytes": 24117248 }
+      ]
+    }
+  ]
+}

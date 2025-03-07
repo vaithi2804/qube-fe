@@ -1,0 +1,14 @@
+
+.text-no-wrap{
+    text-wrap: nowrap;
+}
+
+.overflow-auto {
+    overflow: hidden;
+    position: relative; 
+    max-width: 100%;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
